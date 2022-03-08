@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS users (
     LastName VARCHAR,
     Phone VARCHAR,
     UserType INT,
-    UserAddress varchar (80),
+    UserAddress INT,
     CreatedOn TIMESTAMP,
     LastLogin TIMESTAMP,
     LastUpdated TIMESTAMP

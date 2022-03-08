@@ -1,5 +1,7 @@
-CREATE TABLE IF NOT EXISTS role (
+CREATE TABLE IF NOT EXISTS activity (
     ActivityID serial PRIMARY KEY,
     ActivityName VARCHAR,
-    ActivityDescription VARCHAR
+    ActivityDescription VARCHAR,
+    ActivityHost INT,  -- reference userID
+    ActivityType INT
 );
