@@ -1,4 +1,4 @@
-create or replace procedure AddSport()
+create or replace procedure "AddSport"()
 language plpgsql
 as $$
 declare

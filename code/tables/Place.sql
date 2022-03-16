@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS place (
+CREATE TABLE IF NOT EXISTS "Place" (
     PlaceID serial PRIMARY KEY,
     PlaceName VARCHAR,
     PlaceDescription VARCHAR,

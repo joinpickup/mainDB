@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS sport (
+CREATE TABLE IF NOT EXISTS "Sport" (
     SportID serial PRIMARY KEY,
     SportName VARCHAR,
     SportDescription VARCHAR

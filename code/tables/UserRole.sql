@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS user_role (
+CREATE TABLE IF NOT EXISTS "UserRole" (
     UserID INT,
     RoleID INT,
     RoleEnabled BOOLEAN,
