@@ -1,6 +1,6 @@
-create or replace procedure "AddRole"(
+create or replace function "DeleteRole"(
 	roleName VARCHAR
-)
+) returns void
 language plpgsql
 as $$
 declare

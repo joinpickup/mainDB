@@ -6,27 +6,27 @@ HOST=("database" "database-test")
 for database in ${HOST[@]}; do
 echo $database
     # setup databases that don't have dependencies
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/Place.sql
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/Role.sql
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/Sport.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/Place.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/Role.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/Sport.sql
 
     # type tables
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/ActivityType.sql
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/UserType.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/ActivityType.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/UserType.sql
 
     # setup user tables
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/User.sql
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/UserRole.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/User.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/UserRole.sql
 
     # setup tabels dependent on user table
-    docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_tables/Activity.sql
+    docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_tables/Activity.sql
 
     # stored procedure
-    cd $SCRIPT_DIR/code/sprocs
+    cd $SCRIPT_DIR/code/functions
     for folder in *; do
         cd $folder
         for filename in *; do
-            docker exec -it $database psql -U user -d pickup -f /var/lib/postgresql/my_sprocs/$folder/$filename
+            docker exec -it $database psql -U admin -d pickup -f /var/lib/postgresql/my_funcs/$folder/$filename
         done
         cd ..
     done
