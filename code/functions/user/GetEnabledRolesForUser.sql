@@ -1,4 +1,4 @@
-create or replace function "GetActiveRolesForUser"(userID INT) returns setof "Role"
+create or replace function "GetEnabledRolesForUser"(userID INT) returns setof "Role"
 language plpgsql
 as $$
 begin
