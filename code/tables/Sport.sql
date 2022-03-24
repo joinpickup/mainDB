@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "Sport" (
     "SportID" serial PRIMARY KEY,
-    "SportName" VARCHAR,
+    "SportName" VARCHAR UNIQUE,
     "SportDescription" VARCHAR
 );
