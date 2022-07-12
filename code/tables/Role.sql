@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS "Role" (
-    "RoleID" serial PRIMARY KEY,
-    "RoleName" VARCHAR UNIQUE NOT NULL,
-    "RoleDescription" VARCHAR
+CREATE TABLE IF NOT EXISTS "role" (
+    "role_id" serial PRIMARY KEY,
+    "role_name" VARCHAR UNIQUE NOT NULL,
+    "role_description" VARCHAR
 );
