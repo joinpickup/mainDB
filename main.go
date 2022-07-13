@@ -5,11 +5,11 @@ import (
 
 	"github.com/golang-migrate/migrate/v4"
 	_ "github.com/golang-migrate/migrate/v4/database/postgres"
-	_ "github.com/golang-migrate/migrate/v4/source/github"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 )
 
 func main() {
-	m, err := migrate.New("file:///home/mattes/migrations", "postgres://mattes:secret@localhost:5432/database?sslmode=disable")
+	m, err := migrate.New("file://./db/migrations", "postgres://admin:pickup123@localhost:5432/pickup?sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
