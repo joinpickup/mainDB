@@ -9,10 +9,6 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: pickup123
       POSTGRES_DB: pickup
-    volumes:
-      - ./code/tables:/var/lib/postgresql/my_tables
-      - ./code/functions:/var/lib/postgresql/my_funcs
-      - db-data:/var/lib/postgresql/data
     networks:
       - pickup
   database-test:
@@ -24,10 +20,6 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: pickup123
       POSTGRES_DB: pickup
-    volumes:
-      - ./code/tables:/var/lib/postgresql/my_tables
-      - ./code/functions:/var/lib/postgresql/my_funcs
-      - db-data-test:/var/lib/postgresql/data
     networks:
       - pickup
   admin:
