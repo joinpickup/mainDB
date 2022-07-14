@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	m, err := migrate.New("github://andyrewco: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@joinpickup/maindb/db/migrations", "postgres://admin:pickup123@localhost:5432/pickup?sslmode=disable")
+	m, err := migrate.New("github://andyrewco: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@joinpickup/maindb/db/migrations", "postgresql://doadmin:AVNS_MxlmIZn0FaKU6E_nDvS@private-pickup-do-user-11994297-0.b.db.ondigitalocean.com:25060/maindb?sslmode=require")
 	if err != nil {
 		log.Fatal(err)
 	}
