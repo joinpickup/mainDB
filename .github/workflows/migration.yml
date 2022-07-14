@@ -3,6 +3,8 @@ name: Database Migration
 on:
   push:
     branches: [ main ]
+    paths:
+      - db/migrations/**
 
 jobs:
   build:
