@@ -1,10 +1,10 @@
-create table if not exists "security_right" (
+create table if not exists "right" (
   "id" serial primary key,
   "name" varchar (70) unique not null,
   "description" varchar (254)
 );
 
-create table if not exists "security_role" (
+create table if not exists "role" (
   "id" serial primary key,
   "name" varchar (70) unique not null,
   "description" varchar (254)
