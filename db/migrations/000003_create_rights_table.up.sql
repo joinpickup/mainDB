@@ -14,7 +14,7 @@ create table if not exists "role_right" (
   "role_id" int,
   "right_id" int,
   "enabled" boolean,
-  pimary key(role_id, right_id)
+  primary key(role_id, right_id)
 );
 
 create table if not exists "user_role" (
