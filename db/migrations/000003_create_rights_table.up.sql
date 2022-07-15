@@ -1,6 +1,6 @@
 create table if not exists "right" (
   "id" serial primary key,
-  "name" varchar (70) unique not null,
+  "code" varchar (70) unique not null,
   "description" varchar (254)
 );
 
